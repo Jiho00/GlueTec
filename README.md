@@ -44,3 +44,12 @@ The visual direction takes inspiration from [The Shape of Intelligence](https://
 ## Verification
 
 Check JavaScript syntax with `node --check script.js`. Verify desktop and mobile layouts, the science stage controls, LAB OS mouse and keyboard tab navigation, reading disclosure, chapter menu, and reduced-motion behavior before publishing edits.
+
+
+## Impeccable polish
+
+The editorial composition, original logo, scientific copy, and LAB OS product positioning are preserved. The polish pass improves headline tracking and artwork placement, restores all mobile navigation links through an accessible menu, increases control touch targets to at least 44px, matches tab keyboard navigation to its layout, restores focus after closing menus, and remembers the visitor's motion preference. JavaScript-free visitors can read all product panels and use navigation.
+
+Display headings use a self-hosted Latin subset of Inter Tight from Google Fonts. The font's SIL Open Font License is included in `assets/fonts/OFL.txt`. Body text retains the existing sans-serif family. Deliberately oversized headings and chapter metadata follow the user's supplied editorial reference.
+
+Validation includes wide desktop, intermediate, mobile, and 320px layouts; science stages; product tabs; navigation menu and Escape behavior; motion persistence; text contrast; focus and touch targets; local assets; and browser console errors.

@@ -1,13 +1,49 @@
+document.documentElement.classList.add('js');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const motionButton = document.querySelector('#motion-toggle');
+let savedMotion;
+try {
+  const preference = localStorage.getItem('gluetec-motion');
+  if (preference === 'on' || preference === 'off') savedMotion = preference === 'on';
+} catch { /* The site also works when browser storage is unavailable. */ }
 function setMotion(enabled) {
   document.documentElement.classList.toggle('no-motion', !enabled);
   motionButton.setAttribute('aria-pressed', String(enabled));
   motionButton.textContent = enabled ? 'Motion on' : 'Motion off';
 }
-setMotion(!reducedMotion.matches);
-motionButton.addEventListener('click', () => setMotion(motionButton.getAttribute('aria-pressed') !== 'true'));
-reducedMotion.addEventListener('change', event => setMotion(!event.matches));
+setMotion(savedMotion ?? !reducedMotion.matches);
+motionButton.addEventListener('click', () => {
+  savedMotion = motionButton.getAttribute('aria-pressed') !== 'true';
+  setMotion(savedMotion);
+  try { localStorage.setItem('gluetec-motion', savedMotion ? 'on' : 'off'); } catch { /* Optional preference. */ }
+});
+reducedMotion.addEventListener('change', event => {
+  if (savedMotion === undefined) setMotion(!event.matches);
+});
+
+const mobileLayout = window.matchMedia('(max-width: 700px)');
+const header = document.querySelector('.header');
+const menuButton = document.querySelector('.menu-toggle');
+const navigation = document.querySelector('#site-navigation');
+function closeNavigation(returnFocus = false) {
+  header.classList.remove('nav-open');
+  menuButton.setAttribute('aria-expanded', 'false');
+  if (returnFocus) menuButton.focus();
+}
+menuButton.addEventListener('click', () => {
+  const expanded = menuButton.getAttribute('aria-expanded') !== 'true';
+  header.classList.toggle('nav-open', expanded);
+  menuButton.setAttribute('aria-expanded', String(expanded));
+});
+navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', () => closeNavigation()));
+document.addEventListener('click', event => { if (!header.contains(event.target)) closeNavigation(); });
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && header.classList.contains('nav-open')) closeNavigation(true);
+});
+mobileLayout.addEventListener('change', () => {
+  closeNavigation();
+  updateTabOrientation();
+});
 
 const stageDescriptions = [
   'Start with a target protein and an effector that could support its degradation.',
@@ -25,6 +61,10 @@ document.querySelectorAll('.stage-buttons button').forEach(button => {
 });
 
 const tabs = [...document.querySelectorAll('.preview-tabs [role="tab"]')];
+function updateTabOrientation() {
+  document.querySelector('.preview-tabs').setAttribute('aria-orientation', mobileLayout.matches ? 'horizontal' : 'vertical');
+}
+updateTabOrientation();
 function selectTab(tab, moveFocus = false) {
   tabs.forEach(item => {
     const selected = item === tab;
@@ -38,8 +78,10 @@ tabs.forEach((tab, index) => {
   tab.addEventListener('click', () => selectTab(tab));
   tab.addEventListener('keydown', event => {
     let next;
-    if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % tabs.length;
-    if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index - 1 + tabs.length) % tabs.length;
+    const forward = mobileLayout.matches ? 'ArrowRight' : 'ArrowDown';
+    const backward = mobileLayout.matches ? 'ArrowLeft' : 'ArrowUp';
+    if (event.key === forward) next = (index + 1) % tabs.length;
+    if (event.key === backward) next = (index - 1 + tabs.length) % tabs.length;
     if (event.key === 'Home') next = 0;
     if (event.key === 'End') next = tabs.length - 1;
     if (next !== undefined) {
@@ -51,7 +93,12 @@ tabs.forEach((tab, index) => {
 
 const chapterMenu = document.querySelector('.chapter-menu');
 chapterMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { chapterMenu.open = false; }));
-document.addEventListener('keydown', event => { if (event.key === 'Escape') chapterMenu.open = false; });
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && chapterMenu.open) {
+    chapterMenu.open = false;
+    chapterMenu.querySelector('summary').focus();
+  }
+});
 document.addEventListener('click', event => { if (!chapterMenu.contains(event.target)) chapterMenu.open = false; });
 const chapters = [...document.querySelectorAll('.chapter')];
 let scrollPending = false;
