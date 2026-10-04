@@ -53,3 +53,10 @@ The editorial composition, original logo, scientific copy, and LAB OS product po
 Display headings use a self-hosted Latin subset of Inter Tight from Google Fonts. The font's SIL Open Font License is included in `assets/fonts/OFL.txt`. Body text retains the existing sans-serif family. Deliberately oversized headings and chapter metadata follow the user's supplied editorial reference.
 
 Validation includes wide desktop, intermediate, mobile, and 320px layouts; science stages; product tabs; navigation menu and Escape behavior; motion persistence; text contrast; focus and touch targets; local assets; and browser console errors.
+
+
+## Website policies
+
+`terms.html` and `privacy.html` are linked from every page’s footer. They cover the current public informational site, its illustrative LAB OS demo, GitHub Pages hosting, and the optional `gluetec-motion` local storage preference. No analytics, tracking cookies, forms, payment collection, or consent banner have been added. Hosting disclosures link to GitHub’s official documentation and Privacy Statement.
+
+The current contact route remains Jiho Lee’s GitHub profile because no official public company email has been supplied. Add a private company contact channel when available, and keep policy wording synchronized with actual data handling. Confirm the legal operator’s identity and any applicable jurisdiction-specific requirements before expanding to forms or commercial services. Future LAB OS pilot and subscription terms must separately cover the actual product, research data, pricing, cancellation, and confidentiality.
