@@ -519,12 +519,13 @@ button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible {
 }
 .degradation-lines {
   opacity:0;
+  fill:none;
   stroke:var(--ink);
-  stroke-width:2
+  stroke-width:2;
+  transition:opacity .25s
 }
 .mechanism[data-stage="2"] .degradation-lines {
-  opacity:1;
-  transform:translateX(40px)
+  opacity:1
 }
 .mechanism[data-stage="2"] .target-node circle {
   stroke-dasharray:8 6;
