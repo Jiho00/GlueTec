@@ -46,21 +46,6 @@ mobileLayout.addEventListener('change', () => {
   updateTabOrientation();
 });
 
-const stageDescriptions = [
-  'Start with a target protein and an effector that could support its degradation.',
-  'Look for a small molecule that stabilizes an interaction between the target and effector.',
-  'Test whether the interaction produces degradation. Binding alone does not establish function.'
-];
-const mechanism = document.querySelector('.mechanism');
-document.querySelectorAll('.stage-buttons button').forEach(button => {
-  button.addEventListener('click', () => {
-    document.querySelectorAll('.stage-buttons button').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-    mechanism.dataset.stage = button.dataset.stage;
-    mechanism.setAttribute('aria-label', stageDescriptions[Number(button.dataset.stage)]);
-    document.querySelector('#stage-description').textContent = stageDescriptions[Number(button.dataset.stage)];
-  });
-});
-
 const tabs = [...document.querySelectorAll('.preview-tabs [role="tab"]')];
 function updateTabOrientation() {
   document.querySelector('.preview-tabs').setAttribute('aria-orientation', mobileLayout.matches ? 'horizontal' : 'vertical');

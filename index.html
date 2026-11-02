@@ -8,13 +8,26 @@
   <meta property="og:title" content="GlueTec — Better science. Together.">
   <meta property="og:description" content="Connecting proteins. Connecting researchers. Molecular glue discovery and knoted, from Hong Kong.">
   <meta property="og:type" content="website">
+  <link rel="canonical" href="https://jiho00.github.io/GlueTec/">
+  <meta property="og:site_name" content="GlueTec">
+  <meta property="og:url" content="https://jiho00.github.io/GlueTec/">
+  <meta property="og:image" content="https://jiho00.github.io/GlueTec/assets/gluetec-share-20261102.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="GlueTec — Better science. Together. Ivory protein sculptures linked by a lime green molecular glue, with knoted research software.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GlueTec — Better science. Together.">
+  <meta name="twitter:description" content="GlueTec brings proteins and people together. Explore our molecular glue discovery platform, DNA-encoded library screening, and knoted research workspace.">
+  <meta name="twitter:image" content="https://jiho00.github.io/GlueTec/assets/gluetec-share-20261102.png">
+  <meta name="twitter:image:alt" content="GlueTec — Better science. Together. Molecular glue discovery and connected research.">
   <title>GlueTec — Better science. Together.</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preload" href="assets/fonts/inter-tight-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20261102">
-  <noscript><style>.preview-tabs,.stage-buttons,#motion-toggle,.hero-sequence{display:none}.preview-panel[hidden]{display:block}</style></noscript>
-  <script src="script.js?v=20261102" defer></script>
-  <script type="module" src="hero-scene.js?v=20261102"></script>
+  <link rel="stylesheet" href="styles.css?v=20261102b">
+  <noscript><style>.preview-tabs,#motion-toggle,.hero-sequence{display:none}.preview-panel[hidden]{display:block}</style></noscript>
+  <script src="script.js?v=20261102b" defer></script>
+  <script type="module" src="hero-scene.js?v=20261102b"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -28,13 +41,13 @@
       <div class="hero-kicker"><span>A company built on connection.</span><span>Hong Kong<br>Biotechnology + research software</span></div>
       <h1 id="hero-title">Better science.<span>Together.</span></h1>
       <figure class="hero-story" aria-labelledby="hero-story-caption">
-        <div class="protein-stage" role="img" aria-label="Conceptual discovery-to-degradation sequence: only the candidate small molecules carry DNA tags during library screening. The proteins are untagged. A molecular glue then connects the proteins and the target breaks down.">
+        <div class="protein-stage" role="img" aria-label="Conceptual ubiquitin-proteasome pathway: DNA tags label only library small molecules. A molecular glue recruits the target to an E3 ligase. Ubiquitin marks the target; the proteasome removes the ubiquitin chain, unfolds the target and cleaves it into peptides.">
           <img class="protein-poster" src="assets/molecular-connection.png" width="1536" height="1024" fetchpriority="high" alt="Two illustrative protein folds connected by a molecular glue">
           <canvas id="protein-canvas" aria-hidden="true"></canvas>
-          <div class="protein-labels" aria-hidden="true"><span>Target protein</span><span>Molecular glue</span><span>Effector protein</span></div>
+          <div class="protein-labels" aria-hidden="true"><span>Target protein</span><span>Molecular glue</span><span>E3 ligase</span></div>
         </div>
         <figcaption id="hero-story-caption">
-          <div class="hero-sequence" role="group" aria-label="Explore the molecular glue mechanism"><button type="button" data-scene-step="0" aria-pressed="false">Identify</button><button type="button" data-scene-step="1" aria-pressed="true">Connect</button><button type="button" data-scene-step="2" aria-pressed="false">Degrade</button></div>
+          <div class="hero-sequence" role="group" aria-label="Explore the molecular glue mechanism"><button type="button" data-scene-step="0" aria-pressed="false">Identify</button><button type="button" data-scene-step="1" aria-pressed="true">Connect</button><button type="button" data-scene-step="2" aria-pressed="false">Tag</button><button type="button" data-scene-step="3" aria-pressed="false">Degrade</button></div>
           <p class="scene-description" id="scene-description">A small molecule brings two proteins together.</p>
           <div class="scene-utility"><span>DEL discovery · Molecular glue action</span><button type="button" id="scene-play" hidden>Pause animation <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 5v10m6-10v10"/></svg></button></div>
         </figcaption>
@@ -50,23 +63,12 @@
     <section id="science" class="science section chapter" data-name="The science" data-number="02" aria-labelledby="science-title">
       <div class="section-top"><span class="eyebrow">02 / THE SCIENCE</span><span class="eyebrow">CHEMICALLY INDUCED PROXIMITY</span></div>
       <h2 id="science-title">A small molecule.<br>A new connection.</h2>
-      <div class="science-layout">
-        <div class="science-copy"><p class="lead">What if we could bring a disease-driving protein to the machinery that removes it?</p><p>That is the idea behind molecular glue degraders. GlueTec combines chemically induced proximity with DNA-encoded libraries to search for small molecules that bring a target protein and a degradation effector together.</p><p>Our focus is on identifying productive interactions, then testing whether they translate into protein degradation.</p><a class="underlined-link" href="#platform">Meet the discovery platform</a></div>
-        <div class="science-demo">
-          <div class="demo-heading"><span>THE PRINCIPLE</span><span>01—03</span></div>
-          <div class="mechanism" data-stage="0" role="img" aria-label="Separate target and effector proteins. Select a stage below to explore molecular glue discovery.">
-            <svg viewBox="0 0 600 240" aria-hidden="true"><path class="connection-line" d="M180 120H420"/><g class="target-node"><circle cx="165" cy="120" r="64"/><text x="165" y="114">Target</text><text x="165" y="138">protein</text><g class="degradation-lines"><path d="M126 81l12 12m54 0 12-12M126 159l12-12m54 0 12 12"/></g></g><g class="glue-node"><circle cx="300" cy="120" r="21"/><path d="M290 120h20m-10-10v20"/></g><g class="effector-node"><circle cx="435" cy="120" r="64"/><text x="435" y="114">Effector</text><text x="435" y="138">protein</text></g></svg>
-          </div>
-          <div class="stage-buttons" role="group" aria-label="Explore molecular glue discovery"><button type="button" data-stage="0" aria-pressed="true">01 / Identify</button><button type="button" data-stage="1" aria-pressed="false">02 / Connect</button><button type="button" data-stage="2" aria-pressed="false">03 / Validate</button></div>
-          <p id="stage-description" aria-live="polite">Start with a target protein and an effector that could support its degradation.</p>
-          <p class="demo-note">Conceptual illustration. Successful proximity requires experimental validation.</p>
-        </div>
-      </div>
+      <div class="science-intro"><p class="lead">What if we could bring a disease-driving protein to the machinery that removes it?</p><div class="science-copy"><p>GlueTec combines chemically induced proximity with DNA-encoded libraries to search for small molecules that bring a target protein and a degradation effector together.</p><p>We focus on productive interactions, then test whether they lead to ubiquitination and protein degradation. Binding alone does not establish function.</p></div></div>
       <div id="platform" class="platform">
         <div class="platform-title"><h3>Search broadly.<br> Test function.</h3><p>DNA-encoded libraries meet functional screening.</p></div>
         <div class="platform-steps"><article><span class="step-number">01</span><h4>Design the library</h4><p>Build chemical diversity around a defined discovery question. DNA tags connect each compound to its identity.</p></article><article><span class="step-number">02</span><h4>Screen for proximity</h4><p>Explore compounds that bring the target and effector together, with a focus on productive interactions.</p></article><article><span class="step-number">03</span><h4>Validate the hit</h4><p>Move from a screening signal to follow-up experiments that examine degradation and cellular activity.</p></article></div>
       </div>
-      <details class="research-reading"><summary>Explore the research behind the approach <span aria-hidden="true">+</span></summary><div class="research-list"><p>Selected research cited in GlueTec’s ideation deck. Preprints have not completed peer review.</p><a href="https://doi.org/10.1101/2025.03.19.644003" target="_blank" rel="noopener noreferrer"><span>2025 / bioRxiv preprint</span>Discovery of a VHL molecular glue degrader of GEMIN3 by Picowell RNA-seq</a><a href="https://doi.org/10.26434/chemrxiv-2024-rmgtv" target="_blank" rel="noopener noreferrer"><span>2024 / ChemRxiv preprint</span>Selection of DNA-encoded Chemical Libraries for Compounds that can Induce Protein Ubiquitination</a><a href="https://doi.org/10.1021/jacs.5c01420" target="_blank" rel="noopener noreferrer"><span>2025 / Journal of the American Chemical Society</span>Identification of Actionable Targeted Protein Degradation Effector Sites through Site-Specific Ligand Incorporation-Induced Proximity (SLIP)</a></div></details>
+      <details class="research-reading"><summary>Explore the research behind the approach <span aria-hidden="true">+</span></summary><div class="research-list"><p>Selected discovery research and a structural reference for the conceptual proteasome sequence. Preprints have not completed peer review.</p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6370054/" target="_blank" rel="noopener noreferrer"><span>2019 / Nature</span>Cryo-EM structures and dynamics of substrate-engaged human 26S proteasome</a><a href="https://doi.org/10.1101/2025.03.19.644003" target="_blank" rel="noopener noreferrer"><span>2025 / bioRxiv preprint</span>Discovery of a VHL molecular glue degrader of GEMIN3 by Picowell RNA-seq</a><a href="https://doi.org/10.26434/chemrxiv-2024-rmgtv" target="_blank" rel="noopener noreferrer"><span>2024 / ChemRxiv preprint</span>Selection of DNA-encoded Chemical Libraries for Compounds that can Induce Protein Ubiquitination</a><a href="https://doi.org/10.1021/jacs.5c01420" target="_blank" rel="noopener noreferrer"><span>2025 / Journal of the American Chemical Society</span>Identification of Actionable Targeted Protein Degradation Effector Sites through Site-Specific Ligand Incorporation-Induced Proximity (SLIP)</a></div></details>
     </section>
 
     <section id="knoted" class="lab-section section chapter" data-name="knoted" data-number="03" aria-labelledby="lab-title">

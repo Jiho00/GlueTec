@@ -427,12 +427,6 @@ button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible {
 .science {
   background:#fff
 }
-.science-layout {
-  display:grid;
-  grid-template-columns:1fr 1.3fr;
-  gap:8vw;
-  align-items:start
-}
 .science-copy {
   max-width:440px
 }
@@ -447,119 +441,6 @@ button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible {
 }
 .underlined-link:hover {
   color:#56720b
-}
-.science-demo {
-  background:var(--paper);
-  border:1px solid var(--line);
-  padding:24px 28px
-}
-.demo-heading {
-  display:flex;
-  justify-content:space-between;
-  font-size:12px;
-  letter-spacing:.07em;
-  color:var(--muted)
-}
-.mechanism {
-  width:100%;
-  margin:10px 0 18px
-}
-.mechanism svg {
-  display:block;
-  width:100%;
-  overflow:visible
-}
-.mechanism circle {
-  fill:none;
-  stroke:var(--ink);
-  stroke-width:1.2
-}
-.mechanism text {
-  font-size:18px;
-  fill:var(--ink);
-  text-anchor:middle
-}
-.effector-node circle {
-  fill:#dae7cf;
-  stroke:#627951
-}
-.target-node circle {
-  fill:#fff
-}
-.connection-line {
-  stroke:#70983b;
-  stroke-width:2;
-  stroke-dasharray:4 6;
-  opacity:0;
-  transition:opacity .6s
-}
-.glue-node {
-  opacity:0;
-  transition:opacity .6s
-}
-.glue-node circle {
-  fill:var(--accent);
-  stroke:var(--ink)
-}
-.glue-node path {
-  stroke:var(--ink);
-  stroke-width:2
-}
-.target-node,.effector-node {
-  transition:transform .6s
-}
-.mechanism[data-stage="1"] .target-node,.mechanism[data-stage="2"] .target-node {
-  transform:translateX(40px)
-}
-.mechanism[data-stage="1"] .effector-node,.mechanism[data-stage="2"] .effector-node {
-  transform:translateX(-40px)
-}
-.mechanism[data-stage="1"] .glue-node,.mechanism[data-stage="2"] .glue-node,.mechanism[data-stage="1"] .connection-line,.mechanism[data-stage="2"] .connection-line {
-  opacity:1
-}
-.degradation-lines {
-  opacity:0;
-  fill:none;
-  stroke:var(--ink);
-  stroke-width:2;
-  transition:opacity .25s
-}
-.mechanism[data-stage="2"] .degradation-lines {
-  opacity:1
-}
-.mechanism[data-stage="2"] .target-node circle {
-  stroke-dasharray:8 6;
-  fill:#fff9e9;
-  stroke:var(--amber)
-}
-.stage-buttons {
-  display:flex;
-  gap:8px;
-  border-bottom:1px solid var(--line);
-  padding-bottom:16px
-}
-.stage-buttons button {
-  min-height:var(--touch-target);
-  flex:1;
-  font-size:13px;
-  border:1px solid var(--line);
-  background:transparent;
-  padding:9px 4px;
-  color:var(--ink)
-}
-.stage-buttons button[aria-pressed="true"] {
-  background:var(--ink);
-  border-color:var(--ink);
-  color:#fff
-}
-.science-demo #stage-description {
-  font-size:16px;
-  min-height:48px
-}
-.demo-note {
-  font-size:12px;
-  color:var(--muted);
-  margin-bottom:0
 }
 .platform {
   display:grid;
@@ -1046,13 +927,6 @@ button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible {
   }
 }
 @media(max-width:1000px) {
-  .science-layout {
-    gap:40px;
-    grid-template-columns:1fr 1.15fr
-  }
-  .science-demo {
-    padding:20px
-  }
   .platform {
     grid-template-columns:1fr;
     gap:35px
@@ -1109,21 +983,11 @@ button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible {
   .manifesto .body-copy {
     font-size:16px
   }
-  .science-layout {
-    grid-template-columns:1fr;
-    gap:30px
-  }
   .science-copy {
     max-width:none
   }
   .lead {
     font-size:23px
-  }
-  .science-demo {
-    padding:22px 18px
-  }
-  .science-demo #stage-description {
-    min-height:100px
   }
   .platform {
     margin-top:64px;
@@ -1348,9 +1212,6 @@ button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible {
 .platform-steps p {
   font-size:16px
 }
-.stage-buttons button {
-  font-size:14px
-}
 @media(max-width:700px) {
   .preview-tabs button span {
     font-size:14px
@@ -1379,10 +1240,6 @@ svg {
   stroke-width:1.5;
   stroke-linecap:round;
   stroke-linejoin:round
-}
-.mechanism svg {
-  stroke:none;
-  stroke-linecap:butt
 }
 .circle-plus svg {
   width:24px;
@@ -1423,11 +1280,8 @@ a {
   contain:layout;
   transform-origin:60% 45%
 }
-.stage-buttons button,.preview-tabs button,.text-link .circle-plus {
+.preview-tabs button,.text-link .circle-plus {
   transition:background-color 180ms var(--ease),color 180ms var(--ease)
-}
-.stage-buttons button:hover:not([aria-pressed="true"]) {
-  background:#e4e9d8
 }
 .preview-tabs button:hover:not([aria-selected="true"]) {
   background:#dce2ce
@@ -1502,15 +1356,8 @@ a {
   .nav-contact {
     margin-left:0
   }
-  .science-layout {
-    grid-template-columns:1fr;
-    gap:32px
-  }
   .science-copy {
     max-width:650px
-  }
-  .science-demo {
-    max-width:760px
   }
   .lab-intro {
     grid-template-columns:1.3fr 1fr;
@@ -1635,10 +1482,6 @@ a {
   .chapter-bar button {
     font-size:14px;
     white-space:nowrap
-  }
-  .stage-buttons button {
-    font-size:14px;
-    padding:10px 2px
   }
 }
 @media(max-width:360px) {
@@ -1914,4 +1757,14 @@ a {
   .protein-labels { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;height:30px;bottom:-4px;align-items:start; }
   .protein-labels span { position:static;transform:none;white-space:normal;max-width:none; }
   .protein-stage { margin-bottom:8px; }
+}
+.science-intro { display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:8vw;align-items:start; }
+.science-intro>.lead { margin-top:0;max-width:27ch; }
+.science-intro .science-copy { max-width:65ch; }
+.science-intro .science-copy p:first-child { margin-top:0; }
+.hero-story[data-phase="3"] .protein-labels span:nth-child(2) { visibility:hidden; }
+@media(max-width:700px) {
+  .science-intro { grid-template-columns:minmax(0,1fr);gap:20px; }
+  .hero-sequence { gap:4px; }
+  .hero-sequence button { font-size:13px;padding:10px 4px; }
 }

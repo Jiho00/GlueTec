@@ -43,7 +43,7 @@ The visual direction takes inspiration from [The Shape of Intelligence](https://
 
 ## Verification
 
-Check JavaScript syntax with `node --check script.js`. Verify desktop and mobile layouts, the science stage controls, knoted mouse and keyboard tab navigation, reading disclosure, chapter menu, and reduced-motion behavior before publishing edits.
+Check JavaScript syntax with `node --check script.js`. Verify desktop and mobile layouts, the hero Identify / Connect / Tag / Degrade controls, knoted mouse and keyboard tab navigation, reading disclosure, chapter menu, and reduced-motion behavior before publishing edits.
 
 
 ## Impeccable polish
@@ -52,7 +52,7 @@ The editorial composition, original logo, scientific copy, and knoted product po
 
 Display headings use a self-hosted Latin subset of Inter Tight from Google Fonts. The font's SIL Open Font License is included in `assets/fonts/OFL.txt`. Body text retains the existing sans-serif family. Deliberately oversized headings and chapter metadata follow the user's supplied editorial reference.
 
-Validation includes wide desktop, intermediate, mobile, and 320px layouts; science stages; product tabs; navigation menu and Escape behavior; motion persistence; text contrast; focus and touch targets; local assets; and browser console errors.
+Validation includes wide desktop, intermediate, mobile, and 320px layouts; hero states; product tabs; navigation menu and Escape behavior; motion persistence; text contrast; focus and touch targets; local assets; and browser console errors.
 
 
 ## Website policies
@@ -66,8 +66,20 @@ The current contact route remains Jiho Lee’s GitHub profile because no officia
 
 The user asked to retain the original ivory sculptural protein aesthetic and apply knoted’s lime green. The hero uses three transparent cutouts edited from the original artwork using imagegen: `protein-target.webp`, `protein-effector.webp`, and `molecular-glue.webp`. WebP conversion preserves transparency and reduces the three images to about 624 KiB combined. The original artwork remains the non-JavaScript/loading fallback.
 
-`hero-scene.js` uses self-hosted Motion 12.23.24 and Canvas 2D. The 14-second, single-play story shows DNA-tagged library candidates, removes their tags as the scene changes to molecular glue action, connects the proteins, then disperses and fades the target while the effector remains. It is conceptual artwork, not a compound structure, experimentally established complex, ubiquitination simulation, or efficacy claim. DNA tags belong to the discovery-library scene, not the final degrading complex.
+`hero-scene.js` uses self-hosted Motion 12.23.24 and Canvas 2D. The 18-second, single-play story shows DNA-tagged library candidates, removes their tags as the scene changes to molecular glue action, connects the proteins, then shows E3-mediated ubiquitin tagging, proteasome recognition, deubiquitination, unfolding/translocation and short peptide release while the E3 ligase remains. It is conceptual artwork, not a compound structure, experimentally established complex, atomistic simulation, or efficacy claim. DNA tags belong to the discovery-library scene, not the final degrading complex.
 
-Identify / Connect / Degrade provide keyboard-accessible state selection. Playback can pause, resume and replay. The OS reduced-motion preference always stops spatial autoplay; the site's existing Motion off setting also stops playback. With motion off, users can select still states. Animation pauses when offscreen or the page is hidden and does not run an idle render loop. Failed image/module loading leaves the original artwork and site content readable.
+Identify / Connect / Tag / Degrade provide keyboard-accessible state selection. Playback can pause, resume and replay. The OS reduced-motion preference always stops spatial autoplay; the site's existing Motion off setting also stops playback. With motion off, users can select still states. Animation pauses when offscreen or the page is hidden and does not run an idle render loop. Failed image/module loading leaves the original artwork and site content readable.
 
 The runtime is bundled locally in `assets/vendor/motion.js`; no CDN, tracking, or new browser storage is used. Vendor MIT license notices are supplied beside it. Build source for the bundle is `scripts/motion-entry.js`; an ordinary static server still previews the site without installing anything.
+
+
+## Ubiquitin–proteasome refinement
+
+The user rejected square image-tile fragmentation. That renderer and its tile grid are removed. The target now receives a conceptual ubiquitin chain; the chain is released for recycling as the target unfolds into a continuous polypeptide, enters a proteasome, and emerges as short peptide curves. `assets/proteasome.webp` is an original imagegen sculpture matching the approved ivory material. DNA remains attached only to discovery-library small molecules. E1/E2 transfer chemistry and ATP-driven conformational steps are simplified; the artwork is explanatory, not a structural model. The supporting primary reference is Dong et al., Nature (2019), DOI 10.1038/s41586-018-0736-4, https://pmc.ncbi.nlm.nih.gov/articles/PMC6370054/.
+
+The old circular target/effector widget, its stage handlers and unused styles are removed from the science section. The discovery platform workflow and scientific reading remain.
+
+
+## Link sharing
+
+`assets/gluetec-share-20261102.png` is the 1200 × 630 opaque PNG preview for company links. It uses the original GlueTec logo, self-hosted Inter Tight, the approved ivory proteins, lime molecular glue and knoted wordmark. `assets/share-card-source.html` is the fixed-size, noindex composition used to render it. The PNG is encoded as PNG, rather than merely having a PNG filename. The homepage and both policy pages have absolute Open Graph image URLs, dimensions, alt text, canonical URLs and Twitter/X large-image card metadata. Social platform cache refreshes are controlled by those platforms.
