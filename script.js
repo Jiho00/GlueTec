@@ -10,6 +10,7 @@ function setMotion(enabled) {
   document.documentElement.classList.toggle('no-motion', !enabled);
   motionButton.setAttribute('aria-pressed', String(enabled));
   motionButton.textContent = enabled ? 'Motion on' : 'Motion off';
+  window.dispatchEvent(new CustomEvent('gluetec:motion', { detail: { enabled } }));
 }
 setMotion(savedMotion ?? !reducedMotion.matches);
 motionButton.addEventListener('click', () => {
@@ -121,3 +122,5 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 window.addEventListener('resize', updateChapter);
 updateChapter();
+
+if (window.location.hash === '#lab-os') document.getElementById('knoted').scrollIntoView();

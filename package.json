@@ -1,0 +1,13 @@
+{
+  "name": "gluetec-company-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:runtime": "esbuild scripts/motion-entry.js --bundle --minify --format=esm --outfile=assets/vendor/motion.js",
+    "check": "node --check script.js && node --check hero-scene.js"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12",
+    "motion": "12.23.24"
+  }
+}
